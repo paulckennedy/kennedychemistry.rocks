@@ -85,7 +85,7 @@ router.post('/login', (req, res) => {
     if (!user) {
       errors.email = 'User not found';
       console.log(errors.email);
-      return res.status(404).json({ errors });
+      return res.status(404).json(errors);
     }
 
     // Check password
